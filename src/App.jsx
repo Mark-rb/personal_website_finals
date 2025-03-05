@@ -11,6 +11,7 @@ import Feedback from './pages/Feedback';
 import Photobooth from './pages/Photobooth';
 import './styles/App.css';
 import React, { useState, useEffect } from 'react';
+import backgroundVideo from './images/background/background.mp4';
 
 function App() {
   const [photo, setPhoto] = useState(null);
@@ -25,7 +26,7 @@ function App() {
     <Router>
       <div className="app">
         <video className="background-video" autoPlay loop muted>
-          <source src="/src/images/background/background.mp4" type="video/mp4" />
+          <source src={backgroundVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <Navbar />
