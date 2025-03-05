@@ -1,0 +1,233 @@
+.page-title {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background: var(--white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.category-btn.active {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  cursor: pointer;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-overlay h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.lightbox-content img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.lightbox-info {
+  padding: 1.5rem;
+  background: var(--white);
+}
+
+.lightbox-info h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-filters {
+    margin-bottom: 2rem;
+  }
+
+  .category-btn {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .gallery-grid {
+    gap: 1rem;
+  }
+
+  .image-overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .lightbox {
+    padding: 1rem;
+  }
+}
+
+/* Animation classes */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(42, 157, 143, 0.2) 0%,
+    rgba(38, 70, 83, 0.2) 100%
+  );
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.gallery-item:hover::before {
+  opacity: 1;
+}

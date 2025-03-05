@@ -1,0 +1,176 @@
+.page-title {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.goals-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.goal-card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.goal-header h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.goal-description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.objectives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.objective-item {
+  width: 100%;
+}
+
+.objective-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.progress-percentage {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(42, 157, 143, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 4px;
+}
+
+.vision-section {
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  padding: 2rem;
+}
+
+.vision-section h2 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.vision-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vision-card h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.vision-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .goals-container {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .goal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .vision-section {
+    padding: 1rem;
+  }
+
+  .vision-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animation classes */
+.goal-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.goal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(42, 157, 143, 0.05) 0%,
+    rgba(38, 70, 83, 0.05) 100%
+  );
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.goal-card:hover::before {
+  opacity: 1;
+}

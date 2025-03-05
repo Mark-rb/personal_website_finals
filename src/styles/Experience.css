@@ -1,0 +1,245 @@
+.page-title {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.experience-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-history {
+  margin-bottom: 4rem;
+}
+
+.work-history h2,
+.skills-section h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+}
+
+.experience-card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  width: 45%;
+  position: relative;
+  transition: var(--transition);
+}
+
+.experience-card:nth-child(odd) {
+  margin-left: auto;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+}
+
+.experience-header h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  display: block;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.period {
+  display: block;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-badge {
+  background-color: rgba(42, 157, 143, 0.1);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.achievements h4 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.achievements ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.achievements li {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.achievements li::before {
+  content: '•';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.skills-section {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.skill-header span {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.skill-level {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.skill-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(42, 157, 143, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 4px;
+}
+
+.soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.soft-skill-badge {
+  background: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.soft-skill-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .experience-card {
+    width: 90%;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .experience-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .skills-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .soft-skill-badge {
+    padding: 0.6rem 1.2rem;
+  }
+}

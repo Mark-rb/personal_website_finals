@@ -1,0 +1,203 @@
+.education-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-content {
+  width: 42%;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: 0;
+  margin-right: auto;
+  transform: translateX(-6%);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+  margin-right: 0;
+  transform: translateX(6%);
+}
+
+.time-badge {
+  position: absolute;
+  top: 0;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .time-badge {
+  right: -20%;
+  transform: translateX(50%);
+}
+
+.timeline-item:nth-child(even) .time-badge {
+  left: -20%;
+  transform: translateX(-50%);
+}
+
+.education-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  transition: var(--transition);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.education-card h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-card h3 {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.education-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.achievements h4 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.achievements ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.achievements li {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.achievements li::before {
+  content: '•';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.certifications {
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+.certifications h2 {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.cert-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cert-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.cert-date {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-content {
+    width: 85%;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    transform: none !important;
+  }
+
+  .time-badge {
+    left: 0 !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .education-container {
+    padding: 1rem;
+  }
+
+  .certifications {
+    padding: 1rem;
+  }
+}
